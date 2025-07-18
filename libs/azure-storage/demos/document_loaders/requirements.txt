@@ -1,0 +1,7 @@
+-e ../..
+langgraph==0.5.3
+azure-identity==1.23.1
+langchain-azure-ai==0.1.4
+langchain-text-splitters==0.3.8
+markitdown[pdf]
+python-dotenv[cli]==1.1.1
