@@ -1,0 +1,7 @@
+-e ../..
+langgraph==0.5.3
+azure-identity==1.23.1
+langchain-azure-ai==0.1.4
+python-dotenv[cli]==1.1.1
+langmem
+azure-search-documents
