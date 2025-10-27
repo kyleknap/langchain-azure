@@ -29,7 +29,7 @@ The `langchain-azure-storage` package offers the [`AzureBlobStorageLoader`][lang
 that simplifies retrieving documents stored in Azure Blob Storage for use in a LangChain RAG application. Key benefits of
 the `AzureBlobStorageLoader` include:
 
-* Flexible loading of Azure Storage blobs to LangChain Document objects. You can load blobs as documents from an entire container,
+* Flexible loading of Azure Storage blobs to LangChain `Document` objects. You can load blobs as documents from an entire container,
   a specific prefix within a container, or by blob names. Each document loaded corresponds 1:1 to a blob in the container.
 * Lazy loading support for improved memory efficiency when dealing with large document sets. Documents can now be loaded
   one-at-a-time as you iterate over them instead of all at once.
@@ -52,7 +52,8 @@ pip install langchain-azure-storage
 
 ### Loading documents from a container
 To load all blobs from an Azure Blob Storage container as LangChain [`Document`][langchain-document-ref] objects,
-instantiate the `AzureBlobStorageLoader` with the Azure Storage account URL and container name:
+instantiate the [`AzureBlobStorageLoader`][langchain-azure-storage-loader-ref] with the Azure Storage account URL
+and container name:
 
 
 ```python
@@ -125,12 +126,12 @@ a local file path as input, giving you access to a wide range of parsers for dif
 
 If you're currently using [`AzureBlobStorageContainerLoader`][langchain-community-container-loader-ref] or
 [`AzureBlobStorageFileLoader`][langchain-community-file-loader-ref] from the
-[`langchain-community`][langchain-community-github] package, the new `AzureBlobStorageLoader` provides an improved
-alternative. This section provides step-by-step guidance for migrating to the new loader.
+[`langchain-community`][langchain-community-github] package, the new [`AzureBlobStorageLoader`][langchain-azure-storage-loader-ref]
+provides an improved alternative. This section provides step-by-step guidance for migrating to the new loader.
 
 ### Steps to migrate
 
-To migrate to the new Azure Storage document loaders, make the following changes:
+To migrate to the new Azure Storage document loader, make the following changes:
 
 1. Depend on the `langchain-azure-storage` package
 2. Update import statements from `langchain_community.document_loaders` to
